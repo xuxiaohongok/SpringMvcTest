@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<project name="youle-content-service" default="build" basedir=".">
+	
+	<property name="src.dir" value="src" />
+	<property name="target.dir" value="target" />
+	<property name="build.dir" value="${target.dir}/classes/" />
+		
+	<path id="build-classpath">
+		<pathelement path="${build.dir}" />
+	</path>
+
+	<target name="build">
+		<jar jarfile="${target.dir}/${ant.project.name}.jar">
+			<fileset dir="${build.dir}">
+				<include name="com/zhidian3g/youle/domain/message/*" />
+				<include name="com/zhidian3g/youle/service/message/MessageService.class" />
+			</fileset>
+		</jar>
+	</target>
+</project>

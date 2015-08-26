@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zhidian3g.nextad.domain.Ad">
+	<resultMap id="BaseResultMap" type="com.zhidian3g.nextad.domain.Ad" />
+	<!-- sql块，方便重用 -->
+	 <sql id="adBase">
+	     ad.id, ad.accountId, ad.name, ad.objectType, ad.keyword, ad.description, ad.isSupportPad, ad.showType, ad.clickType,
+	     ad.clickSite, ad.apkSize, ad.packageName, ad.feeType, ad.feeSum, ad.dayBudget, ad.putInState, ad.startDate, 
+	     ad.endDate
+	 </sql>
+	
+	
+  <select id="findById" resultType="Ad" parameterType="java.lang.Long">
+    	select <include refid="adBase"/> FROM ad ad where ad.id = #{adId,jdbcType=BIGINT} and isDelete=0
+  </select>
+  
+</mapper>
