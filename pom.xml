@@ -20,16 +20,16 @@
 		<fastjson.version>1.1.34</fastjson.version>
 		<commons-fileupload.version>1.3</commons-fileupload.version>
 		<commons-lang3.version>3.3.2</commons-lang3.version>
-        <common-collections4.version>4.0</common-collections4.version>
-        <commons-io.version>2.4</commons-io.version>
+		<common-collections4.version>4.0</common-collections4.version>
+		<commons-io.version>2.4</commons-io.version>
 		<guava.version>15.0</guava.version>
-		
-		<!--数据源工具类  -->
+
+		<!--数据源工具类 -->
 		<druid.version>1.0.14</druid.version>
-		
+
 		<!--并发框架 -->
 		<disruptor.version>3.3.2</disruptor.version>
-		
+
 		<!-- 测试单元 -->
 		<junit.version>4.11</junit.version>
 	</properties>
@@ -75,28 +75,34 @@
 			<artifactId>commons-fileupload</artifactId>
 			<version>${commons-fileupload.version}</version>
 		</dependency>
-		
- 		<dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>${commons-lang3.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-collections4</artifactId>
-            <version>${common-collections4.version}</version>
-        </dependency>
-        
-        <dependency>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>
-            <version>${commons-io.version}</version>
-        </dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>${commons-lang3.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-collections4</artifactId>
+			<version>${common-collections4.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>${commons-io.version}</version>
+		</dependency>
 
 		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
 			<version>${guava.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.jdom</groupId>
+			<artifactId>jdom</artifactId>
+			<version>2.0.2</version>
 		</dependency>
 
 		<!-- json 相关jar包 -->
@@ -125,20 +131,20 @@
 			<artifactId>druid</artifactId>
 			<version>${druid.version}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.18</version>
 		</dependency>
-		
-		<!--并发框架  相关jar-->
+
+		<!--并发框架 相关jar -->
 		<dependency>
 			<groupId>com.lmax</groupId>
 			<artifactId>disruptor</artifactId>
 			<version>${disruptor.version}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>javax.annotation</groupId>
 			<artifactId>jsr250-api</artifactId>
@@ -193,7 +199,7 @@
 			<scope>provided</scope>
 		</dependency>
 
-		<!-- 测试单元工具包 jar  -->
+		<!-- 测试单元工具包 jar -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -214,7 +220,7 @@
 					<target>1.6</target>
 				</configuration>
 			</plugin>
-			
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
@@ -222,7 +228,7 @@
 					<skip>true</skip>
 				</configuration>
 			</plugin>
-			
+
 			<plugin>
 				<groupId>org.mybatis.generator</groupId>
 				<artifactId>mybatis-generator-maven-plugin</artifactId>
