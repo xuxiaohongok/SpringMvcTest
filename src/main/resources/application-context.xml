@@ -29,5 +29,5 @@
 	</bean>
 	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
 	<context:component-scan base-package="com.zhidian3g.nextad.service" />
-	<!-- <import resource="application-mybatis.xml" /> -->
+	<import resource="application-mybatis.xml" />
 </beans>
